@@ -110,7 +110,7 @@ def save_pdf(df: pd.DataFrame, path: str = "reports/final_report.pdf"):
 
 
 def save_examples(config_path: str, ckpt_path: str, n_success: int = 3, n_fail: int = 3):
-    """Сохраняет примеры успешных и ошибочных предсказаний (не менее 3+3)."""
+    # Сохраняет примеры успешных и ошибочных предсказаний (не менее 3+3).
     config = load_config(config_path)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
